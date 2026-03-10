@@ -1,0 +1,86 @@
+/* Start main Color */
+:root {
+  --primary: #ff762d;
+  --primary-dark: #c94d00;
+}
+/* End main Color */
+
+/* start Body */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+/* End Body */
+
+/* start Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+/* End Navbar */
+
+/* Start Hero */
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+    url("/Images/Beans_in_bags.jpg") center/cover no-repeat;
+  min-height: 90vh;
+}
+/* End Hero */
+
+/* start Button */
+.btn-primary-custom {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary-custom:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+/* End Button */
+
+/* Start Feature */
+.feature-card {
+  transition: all 0.35s ease;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+}
+
+.feature-head {
+  color: var(--primary);
+}
+.feature-icon {
+  font-size: 40px;
+  color: var(--primary);
+}
+.feature-card p {
+  font-size: 20px;
+}
+/* End Feature */
+
+/* Footer Section */
+footer h4 {
+  color: var(--primary);
+}
+
+.about-icons a {
+  padding: 8px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+}
+.about-icons a:hover {
+  color: var(--primary);
+}
