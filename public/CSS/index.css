@@ -22,7 +22,7 @@ body {
 .hero {
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
-    url("/Images/Beans_in_bags.jpg") center/cover no-repeat;
+    url("/public/Images/Beans_in_bags.jpg") center/cover no-repeat;
   min-height: 90vh;
 }
 /* End Hero */

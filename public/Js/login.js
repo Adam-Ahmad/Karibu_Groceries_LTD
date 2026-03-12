@@ -56,17 +56,17 @@ async function login(event) {
       // validate
       if (users.user.role === "manager") {
         setTimeout(() => {
-          window.location.href = "/HTML/manager.html";
+          window.location.href = "/public/manager.html";
         }, 1200);
       }
       if (users.user.role === "director") {
         setTimeout(() => {
-          window.location.href = "/HTML/director.html";
+          window.location.href = "/public/director.html";
         }, 1200);
       }
       if (users.user.role === "salesAgent") {
         setTimeout(() => {
-          window.location.href = "/HTML/sales_agent.html";
+          window.location.href = "/public/sales_agent.html";
         }, 1200);
       }
     } else {
