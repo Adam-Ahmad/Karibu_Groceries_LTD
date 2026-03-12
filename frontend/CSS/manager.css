@@ -9,6 +9,7 @@
 }
 body {
   background-color: #f8f9fa;
+  font-family: Inter, sans-serif;
 }
 
 .nav-link {
@@ -78,11 +79,7 @@ input:focus {
   padding: 0.75rem 1rem;
   transition: all 0.2s;
 }
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
+
 .card:hover .card-icon-bg {
   transform: scale(1.1);
 }

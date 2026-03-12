@@ -63,9 +63,6 @@
               <li class="nav-item">
                 <a href="#stock" class="nav-link">Stock</a>
               </li>
-              <li class="nav-item">
-                <a href="#reports" class="nav-link">Reports</a>
-              </li>
             </ul>
 
             <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
@@ -195,13 +192,55 @@
                   <table class="table table-hover align-middle">
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>Produce Name</th>
+                        <th>Produce</th>
                         <th>Tonnage (kg)</th>
+                        <th>Price (UGX/kg)</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
-                    <tbody id="inventoryTableBody">
-                      <!-- Data will be populated by JS-->
+                    <tbody>
+                      <tr>
+                        <td>Beans</td>
+                        <td>2,450</td>
+                        <td>3,200</td>
+                        <td>
+                          <span class="status-normal text-success">Normal</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cow peas</td>
+                        <td>78</td>
+                        <td>4,100</td>
+                        <td>
+                          <span class="status-critical text-danger"
+                            >Critical - Low</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Grain Maize</td>
+                        <td>1,200</td>
+                        <td>1,800</td>
+                        <td>
+                          <span class="status-low text-warning">Low Stock</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>G-nuts</td>
+                        <td>950</td>
+                        <td>5,500</td>
+                        <td>
+                          <span class="status-normal text-success">Normal</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Soybeans</td>
+                        <td>600</td>
+                        <td>4,800</td>
+                        <td>
+                          <span class="status-low text-warning">Low Stock</span>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -310,8 +349,8 @@
                       <div class="mb-3">
                         <select class="form-select" id="role" required>
                           <option value="">Select Role</option>
-                          <option value="Manager">Manager</option>
-                          <option value="SalesAgent">Sales Agent</option>
+                          <option value="manager">Manager</option>
+                          <option value="salesAgent">Sales Agent</option>
                         </select>
                       </div>
                       <button
@@ -334,6 +373,11 @@
         &copy; 2026 Karibu Groceries LTD. All rights reserved.
       </footer>
     </div>
+    <!-- Toast container -->
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      id="toastContainer"
+    ></div>
     <!-- Bootstrap JS -->
     <script src="/Js/bootstrap.bundle.min.js"></script>
     <script src="/Js/all.min.js"></script>

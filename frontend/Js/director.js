@@ -25,7 +25,6 @@ function showToast(message, type = "success") {
 let userInfo = document.querySelector("#userInfo");
 let userRole = document.querySelector("#userRole");
 let userDetails = JSON.parse(localStorage.getItem("userDetails"));
-console.log(userDetails);
 
 userInfo.innerHTML = userDetails.user.username.toUpperCase();
 userRole.innerHTML = userDetails.user.role;
@@ -64,6 +63,7 @@ async function desplayTotalCreditSales() {
   try {
     let response = await fetch(`${API_URL}/getCreditTotals`);
     let totalCredit = await response.json();
+
     totalCreditSalesMaganjo.innerHTML = `${totalCredit.creditSalesTotals[1].totalAmountDue} UGX`;
     totalCreditSalesMatugga.innerHTML = `${totalCredit.creditSalesTotals[0].totalAmountDue} UGX`;
   } catch (error) {
@@ -97,37 +97,35 @@ displayTotals();
 // ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Inventory Table
 
-let inventoryTableBody = document.getElementById("inventoryTableBody");
+// let inventoryTableBody = document.getElementById("inventoryTableBody");
 
-async function displayInventort() {
-  try {
-    let response = await fetch(`${API_URL}/getCurrentStock`);
-    let Inventory = await response.json();
-    console.log(typeof Inventory);
+// async function displayInventort() {
+//   try {
+//     let response = await fetch(`${API_URL}/getCurrentStock`);
+//     let Inventory = await response.json();
+//     console.log(typeof Inventory);
 
-    console.log(Inventory);
-    localStorage.setItem("Inventory", JSON.stringify(Inventory));
-    inventoryTableBody.innerHTML = "";
-    let inventoryRows = "";
-    Inventory[0].forEach((inventory, index) => {
-      inventoryRows = `
-      <tr>
-        <td>${index + 1}</td>
-        <td>${inventory.produceName}</td>
-        <td>${inventory.tonnageKg}</td>
-      </tr>
-      `;
-    });
-    inventoryTableBody.innerHTML += inventoryRows;
-  } catch (error) {
-    console.log(error);
-  }
-}
-displayInventort();
+//     console.log(Inventory);
+//     localStorage.setItem("Inventory", JSON.stringify(Inventory));
+//     inventoryTableBody.innerHTML = "";
+//     let inventoryRows = "";
+//     Inventory[0].forEach((inventory, index) => {
+//       inventoryRows = `
+//       <tr>
+//         <td>${index + 1}</td>
+//         <td>${inventory.produceName}</td>
+//         <td>${inventory.tonnageKg}</td>
+//       </tr>
+//       `;
+//     });
+//     inventoryTableBody.innerHTML += inventoryRows;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// displayInventort();
 // //////////////////////////////////////////////
 // Users Cards
-
-const addUserForm = document.getElementById("addUserForm");
 
 let usersTableBody = document.getElementById("usersTableBody");
 
@@ -173,6 +171,7 @@ displayUsers();
 // /////////////////////////////////////////////////////////////////////////////////////////
 
 // Event listener for the Add User form submission
+const addUserForm = document.getElementById("addUserForm");
 
 addUserForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -216,7 +215,7 @@ addUserForm.addEventListener("submit", async (event) => {
     if (response.ok) {
       showToast("Added Successfully!");
       setTimeout(() => {
-        window.location.href = "/HTML/manager.html";
+        window.location.href = "/HTML/director.html";
       }, 1000);
       // Clear the form
       addUserForm.reset();

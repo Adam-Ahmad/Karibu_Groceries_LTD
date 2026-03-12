@@ -1,9 +1,15 @@
 :root {
   --primary: #ff762d;
   --primary-dark: #c94d00;
+  --success: #27ae60;
+  --danger: #c0392b;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+  --gray: #6c757d;
 }
 body {
   background-color: #f8f9fa;
+  font-family: Inter, sans-serif;
 }
 .card-icon-bg {
   width: 48px;
@@ -68,3 +74,23 @@ body {
   line-height: 1;
 }
 /* end Toast */
+.btn-orange {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s;
+}
+
+.btn-primary-custom,
+.btn-orange {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.btn-primary-custom:hover,
+.btn-orange:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
